@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');   
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header .navbar {
+    background: #A5C9CA;
+    color: #fff;
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+.list{
+    font-family: "Playfair Display", serif;
+    background: #A5C9CA;
+    color: #fff;
+}
+header{
+    background: #395B64;
+}
+#hero{
+    position: relative;
+    color: #fff;
+    padding-top: 75px;
+    height: 90vh;
+}
+.col-hero .boton{
+    font-family: "Playfair Display", serif;
+    position: absolute;
+    left: 200px;
+    color: #fff;
+    border: 3px solid #000;
+    border-radius: 5px;
+    font-size: 45px;
+    text-decoration: none;
+    transition: .5s;
+    cursor: pointer;
+}
+.col-hero .boton:hover{
+    transform: scale(0.9);
+}
+#hero .img1{
+    position: absolute;
+    top: 90px;
+}
+#hero h1{
+    font-family: "Playfair Display", serif;
+    margin-left: 110px ; 
+}
+#hero h3{
+    font-family: 'Raleway', serif;
+    font-size: 75px;
+}
+#hero p{
+    font-family: "Playfair Display", serif;
+    margin-top: 225px;
+    margin-left: 50px ;
+    font-size: 40px;
+}
+#hero .fila{
+    display: flex;
+}
+#hero .col-hero{
+    margin-right: 100px;
+}
+#hero .img2{
+    position: absolute;
+    bottom: 100px;
+}
+#hero .img3{
+    position: absolute;
+    bottom: -7px;
+    z-index: 1;
+    right: -300px;
+}
+#hero .img4{
+    position: absolute;
+    bottom: 0;
+    right: -286px;
+    z-index: 2;
+}
+
+/* Seccion sobre mi */
+#sobre-mi{
+    padding-top: 50px;
+    background: #A5C9CA;
+    height: 100vh;
+    display: block;
+    text-align: center;
+}
+#sobre-mi h3{
+    padding-bottom: 20px;
+    font-family: 'Raleway', serif;
+    font-size: 70px;
+}
+#sobre-mi p{
+    padding-bottom: 20px;
+    font-family: "Playfair Display", serif;
+    font-size: 35px;
+    text-align: justify;
+}
+#sobre-mi .cajita{
+    position: relative;
+}
+#sobre-mi .Cuadro{
+    z-index: 1;
+}
+#sobre-mi .Linea1{
+    position: absolute;
+    bottom: 250px;
+    left: 50px;
+    z-index: 3;
+}
+#sobre-mi .Linea2{
+    position: absolute;
+    bottom: 250px;
+    right: 50px;
+    z-index: 3;
+}
+
+#sobre-mi .Linea3{
+    position: absolute;
+    top: 10px;
+    right: 640px;
+    z-index: 3;
+}
+#sobre-mi h2{
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    font-weight: bold;
+}
+#sobre-mi h4{
+    font-family: "Playfair Display", serif;
+    color: #E3B71B;
+    font-weight: bold;
+}
+#sobre-mi .t1{
+    position: absolute;
+    top: 120px;
+    left: 120px;
+    z-index: 3;
+}
+#sobre-mi .t2{
+    position: absolute;
+    top: 120px;
+    right: 120px;
+    z-index: 3;
+}
+#sobre-mi .t3{
+    position: absolute;
+    bottom: 105px;
+    right: 0;
+    left: 0;
+    z-index: 3;
+}
+#sobre-mi .p1{
+    font-size: 40px;
+    position: absolute;
+    top: 60px;
+    left: 265px;
+    z-index: 3;
+}
+#sobre-mi .p2{
+    font-size: 40px;
+    position: absolute;
+    top: 60px;
+    right: 275px;
+    z-index: 3;
+}
+#sobre-mi .p3{
+    font-size: 40px;
+    position: absolute;
+    bottom: 140px;
+    right: 0;
+    left: 0;
+    z-index: 3;
+}
+/* Seccion de habilidades */
+#habilidades{
+    padding-top: 50px;
+    padding-bottom: 1000px;
+    background: #181818;
+    height: 100vh;
+    display: block;
+    text-align: center;
+    align-items: center;
+}
+#habilidades h3{
+    font-family: 'Raleway', serif;
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+}
+#habilidades h2{
+    font-family: 'Raleway', serif;
+    color: #fff;
+}
+#habilidades p{
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    text-align: justify;
+}
+#habilidades .fila{
+    display: flex;
+}
+#habilidades .col-hab{
+    position: relative;
+    margin: 50px;
+}
+#habilidades .col-hab .c1{
+    position: absolute;
+    top: 135px;
+    left: 290px;
+    z-index: 2;
+}
+#habilidades .col-hab .c2{
+    position: absolute;
+    top: 135px;
+    right: 160px;
+    z-index: 2;
+}
+#habilidades .col-hab .c3{
+    position: absolute;
+    top: 105px;
+    right: 160px;
+    z-index: 2;
+}
+/* Estilos de la seccion de portafoloo */
+#portfolio{
+    padding-top: 50px;
+    background: #A5C9CA;
+    height: 85vh;
+    display: block;
+    text-align: center;
+}
+#portfolio .cajita{
+    position: relative;
+}
+#portfolio .cajita h2{
+    text-align: justify;
+    font-family: 'Raleway', serif;
+    font-size: 150px;
+    color: transparent; 
+    -webkit-text-stroke: 1px #000;
+    text-shadow: 1px #000;
+}
+#portfolio .cajita h3{
+    text-align: justify;
+    font-family: 'Raleway', serif;
+    font-size: 75px;
+    color: #000; 
+}
+#portfolio .cajita .titulo{
+    position: absolute;
+    top: 72px;
+    left: 5px;
+}
+#portfolio .caja{
+    position: relative;
+    background: #181818;
+    height: 450px;
+    padding-top: 125px;
+}
+#portfolio .caja a{
+    text-decoration: none;
+}
+#portfolio .caja h2{
+    font-family: 'Raleway', serif;
+    font-weight: normal;
+    color: #fff;
+}
+/* Estilos de mi experiencia */
+#experiencia{
+    padding-top: 50px;
+    padding-bottom: 1000px;
+    background: #181818;
+    height: 100vh;
+    display: block;
+    text-align: center;
+    align-items: center; 
+}
+#experiencia h3{
+    font-family: 'Raleway', serif;
+    font-size: 50px;
+    color: #fff; 
+}
+#experiencia h2{
+    font-family: 'Raleway', serif;
+    font-size: 35px;
+    color: #fff; 
+}
+#experiencia p{
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    color: #fff; 
+}
+#experiencia .cajita{
+    position: relative;
+}
+#experiencia .cajita .col1{
+    position: absolute;
+    top: 150px;
+    left: 250px;
+}
+#experiencia .cajita .col2{
+    position: absolute;
+    top: 280px;
+    right: 230px;
+}
+#experiencia .cajita .col3{
+    position: absolute;
+    top: 500px;
+    left: 250px;
+}
+#experiencia .cajita .col4  {
+    position: absolute;
+    bottom: 50px;
+    right: 230px;
+}
+/* Estilos de footer */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 50px 0;
+    color: #fff;
+}
