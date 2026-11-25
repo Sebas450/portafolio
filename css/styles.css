@@ -37,7 +37,7 @@ a { color: inherit; }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
 .logo { font-weight: 800; font-size: 1.4rem; text-decoration: none; color: var(--gold); }
 .nav nav { min-width: 0; max-width: 100%; }
-.nav ul { display: flex; gap: 24px; list-style: none; overflow-x: auto; }
+.nav ul { display: flex; gap: 24px; list-style: none; overflow-x: auto; scrollbar-width: none; }
 .nav a { text-decoration: none; font-weight: 600; font-size: .95rem; white-space: nowrap; }
 .nav ul a:hover { color: var(--gold); }
 
@@ -65,8 +65,8 @@ a { color: inherit; }
 .eyebrow { color: var(--gold); font-weight: 600; letter-spacing: .15em; text-transform: uppercase; }
 .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.05; margin: 8px 0 20px; }
 .lead { font-size: clamp(1.15rem, 2vw, 1.4rem); max-width: 32ch; opacity: .9; }
-.photo { background: var(--teal); border-radius: 50% 50% 0 0; overflow: hidden; }
-.photo img { width: 100%; height: auto; }
+.photo { background: #f2f2f4; border-radius: 50% 50% 0 0; overflow: hidden; aspect-ratio: 4 / 5; }
+.photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; }
 
 /* Secciones */
 .section { padding: 96px 0; }
@@ -103,6 +103,11 @@ a { color: inherit; }
 .project img { aspect-ratio: 16 / 10; width: 100%; object-fit: cover; }
 .project span { display: block; padding: 14px 18px; font-family: "Raleway", sans-serif; font-weight: 600; }
 .project:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0, 0, 0, .25); }
+@media (min-width: 761px) {
+    .project.featured { grid-column: span 2; grid-row: span 2; display: flex; flex-direction: column; }
+    .project.featured img { flex: 1; aspect-ratio: auto; min-height: 0; object-position: top left; }
+    .project.featured span { font-size: 1.2rem; }
+}
 
 /* Experiencia */
 .exp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; }
@@ -122,7 +127,21 @@ a { color: inherit; }
 footer { background: #000; color: var(--white); text-align: center; padding: 80px 0 40px; }
 footer h2 { font-size: clamp(2rem, 4vw, 3rem); }
 footer p a { color: var(--gold); overflow-wrap: anywhere; }
+.social { display: flex; justify-content: center; gap: 16px; list-style: none; margin-top: 28px; }
+.social a { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: #222; transition: background .2s; }
+.social a:hover { background: var(--teal-dark); }
+.social svg { width: 22px; height: 22px; fill: var(--white); }
 footer small { display: block; margin-top: 56px; opacity: .6; }
+
+/* Animaciones (solo con JS activo; sin JS todo se ve normal) */
+.cursor { color: var(--white); margin-left: 2px; animation: parpadeo 1s steps(1) infinite; }
+@keyframes parpadeo { 50% { opacity: 0; } }
+.nav ul a.active { color: var(--gold); }
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.visible { opacity: 1; transform: none; }
+.js .project.reveal.visible:hover { transform: translateY(-4px); transition-delay: 0s; }
+.js .bar::before { width: 0; transition: width 1.2s ease .3s; }
+.js .visible .bar::before { width: var(--p); }
 
 a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 
@@ -139,4 +158,5 @@ a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .btn, .project { transition: none; }
+    .cursor { display: none; }
 }

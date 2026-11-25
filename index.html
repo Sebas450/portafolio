@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
     <header class="nav">
@@ -30,7 +31,7 @@
         <section id="inicio" class="hero">
             <div class="container hero-grid">
                 <div>
-                    <p class="eyebrow">Desarrollador web</p>
+                    <p class="eyebrow"><span id="rol">Desarrollador web</span><span class="cursor" aria-hidden="true">|</span></p>
                     <h1>Sebastian Hernandez Romero</h1>
                     <p class="lead">¡Hola! Soy Sebastian, un apasionado de la programación y la tecnología.</p>
                     <div class="actions">
@@ -39,7 +40,7 @@
                     </div>
                 </div>
                 <div class="photo">
-                    <img src="img/Sebas.png" alt="Foto de Sebastian Hernandez Romero" width="600" height="800">
+                    <img src="img/Sebas.webp" alt="Foto de Sebastian Hernandez Romero" width="896" height="1200">
                 </div>
             </div>
         </section>
@@ -49,9 +50,9 @@
                 <h2>Sobre mí</h2>
                 <p class="intro">Soy Sebastian Hernandez Romero, un desarrollador web apasionado por la programación, con sólidos conocimientos en HTML, CSS y JavaScript. Mi pasión por la tecnología me impulsa a buscar constantemente nuevos desafíos y oportunidades de aprendizaje en el mundo de la programación.</p>
                 <ul class="stats">
-                    <li><strong>2</strong><span>Años de experiencia</span></li>
-                    <li><strong>8</strong><span>Proyectos finalizados</span></li>
-                    <li><strong>1</strong><span>Cliente satisfecho</span></li>
+                    <li><strong data-count="2">2</strong><span>Años de experiencia</span></li>
+                    <li><strong data-count="9">9</strong><span>Proyectos finalizados</span></li>
+                    <li><strong data-count="1">1</strong><span>Cliente satisfecho</span></li>
                 </ul>
             </div>
         </section>
@@ -86,6 +87,9 @@
             <div class="container">
                 <h2>Mi portafolio</h2>
                 <div class="projects">
+                    <a class="project featured" href="https://observatorio-empresarial-sepia.vercel.app/inicio" target="_blank" rel="noopener">
+                        <img src="img/observatorio.png" alt="" loading="lazy"><span>Observatorio Empresarial · Uniempresarial</span>
+                    </a>
                     <a class="project" href="https://sebas450.github.io/rumbo/" target="_blank" rel="noopener">
                         <img src="img/Rumbo.png" alt="" loading="lazy"><span>Rumbo</span>
                     </a>
@@ -146,8 +150,16 @@
             <p>¿Tienes un proyecto en mente? Escríbeme a <a href="mailto:sebastianhernandezromero45@gmail.com">sebastianhernandezromero45@gmail.com</a></p>
             <div class="actions center">
                 <a class="btn" href="mailto:sebastianhernandezromero45@gmail.com">Enviar correo</a>
-                <a class="btn btn-ghost" href="tel:+573163597867">+57 316 359 7867</a>
+                <a class="btn btn-ghost" href="https://wa.me/573163597867" target="_blank" rel="noopener">WhatsApp</a>
             </div>
+            <ul class="social">
+                <li><a href="https://www.linkedin.com/in/sebastian-hernandez-dev/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3V9.5Zm7 0h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6.1V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4V9.5Z"/></svg>
+                </a></li>
+                <li><a href="https://github.com/Sebas450" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"/></svg>
+                </a></li>
+            </ul>
             <small>© Sebastian Hernandez Romero. Todos los derechos reservados.</small>
         </div>
     </footer>
