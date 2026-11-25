@@ -53,6 +53,17 @@ if (reducido) {
     });
 }
 
+// Filtros de proyectos por tecnología (data-filter del botón ↔ data-tech de la tarjeta).
+const botones = document.querySelectorAll('.filters button');
+botones.forEach(boton => boton.addEventListener('click', () => {
+    const filtro = boton.dataset.filter;
+    botones.forEach(b => b.setAttribute('aria-pressed', b === boton));
+    document.querySelectorAll('.project').forEach(p => {
+        p.hidden = filtro !== 'todos' && p.dataset.tech !== filtro;
+        p.classList.add('visible');
+    });
+}));
+
 // Resalta en el menú la sección que está en el centro de la pantalla.
 const enlaces = document.querySelectorAll('.nav ul a');
 const espia = new IntersectionObserver(entradas => entradas.forEach(e => {

@@ -86,33 +86,48 @@
         <section id="portafolio" class="section light">
             <div class="container">
                 <h2>Mi portafolio</h2>
+                <div class="filters" role="group" aria-label="Filtrar proyectos por tecnología">
+                    <button type="button" data-filter="todos" aria-pressed="true">Todos</button>
+                    <button type="button" data-filter="react" aria-pressed="false">React</button>
+                    <button type="button" data-filter="javascript" aria-pressed="false">JavaScript</button>
+                    <button type="button" data-filter="html-css" aria-pressed="false">HTML y CSS</button>
+                </div>
                 <div class="projects">
-                    <a class="project featured" href="https://observatorio-empresarial-sepia.vercel.app/inicio" target="_blank" rel="noopener">
+                    <a class="project featured" data-tech="react" href="https://observatorio-empresarial-sepia.vercel.app/inicio" target="_blank" rel="noopener">
                         <img src="img/observatorio.png" alt="" loading="lazy"><span>Observatorio Empresarial · Uniempresarial</span><p class="desc">Plataforma de eventos, oportunidades y tendencias para la comunidad Uniempresarial, con buscador, noticias, cursos y empresas coformadoras.</p>
+                        <ul class="tags"><li>React</li><li>Tailwind</li><li>Supabase</li></ul>
                     </a>
-                    <a class="project" href="https://sebas450.github.io/rumbo/" target="_blank" rel="noopener">
+                    <a class="project" data-tech="html-css" href="https://sebas450.github.io/rumbo/" target="_blank" rel="noopener">
                         <img src="img/Rumbo.png" alt="" loading="lazy"><span>Rumbo</span><p class="desc">Sitio web de turismo con planes y destinos para encontrar tu próximo viaje.</p>
+                        <ul class="tags"><li>HTML</li><li>CSS</li></ul>
                     </a>
-                    <a class="project" href="https://sebas450.github.io/dinnings/" target="_blank" rel="noopener">
+                    <a class="project" data-tech="html-css" href="https://sebas450.github.io/dinnings/" target="_blank" rel="noopener">
                         <img src="img/dinnings.png" alt="" loading="lazy"><span>Dinnings</span><p class="desc">Sitio web de restaurante con carta, bebidas y reserva de mesa.</p>
+                        <ul class="tags"><li>HTML</li><li>CSS</li></ul>
                     </a>
-                    <a class="project" href="https://sebas450.github.io/algoritmos/algoritmo.html" target="_blank" rel="noopener">
+                    <a class="project" data-tech="javascript" href="https://sebas450.github.io/algoritmos/algoritmo.html" target="_blank" rel="noopener">
                         <img src="img/Algoritmos.png" alt="" loading="lazy"><span>Algoritmos</span><p class="desc">Colección de algoritmos en JavaScript puro: operaciones básicas, áreas, conversión de medidas, descuentos y salario.</p>
+                        <ul class="tags"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
                     </a>
-                    <a class="project" href="https://sebas450.github.io/calculadora/" target="_blank" rel="noopener">
+                    <a class="project" data-tech="javascript" href="https://sebas450.github.io/calculadora/" target="_blank" rel="noopener">
                         <img src="img/Calculadora.png" alt="" loading="lazy"><span>Calculadora</span><p class="desc">Calculadora funcional en JavaScript con modo oscuro.</p>
+                        <ul class="tags"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
                     </a>
-                    <a class="project" href="https://sebas450.github.io/simuladorInversion/" target="_blank" rel="noopener">
+                    <a class="project" data-tech="javascript" href="https://sebas450.github.io/simuladorInversion/" target="_blank" rel="noopener">
                         <img src="img/simulador.png" alt="" loading="lazy"><span>Simulador de inversión</span><p class="desc">Formulario que calcula el rendimiento de una inversión según el monto y el tiempo.</p>
+                        <ul class="tags"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
                     </a>
-                    <a class="project" href="https://sebas450.github.io/website_figuras/" target="_blank" rel="noopener">
+                    <a class="project" data-tech="javascript" href="https://sebas450.github.io/website_figuras/" target="_blank" rel="noopener">
                         <img src="img/Figuras.png" alt="" loading="lazy"><span>Figuras</span><p class="desc">Botones que transforman una figura con JavaScript: forma, tamaño, rotación, sombra y color.</p>
+                        <ul class="tags"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
                     </a>
-                    <a class="project" href="https://sebas450.github.io/cinescape/" target="_blank" rel="noopener">
+                    <a class="project" data-tech="javascript" href="https://sebas450.github.io/cinescape/" target="_blank" rel="noopener">
                         <img src="img/cinescape.png" alt="" loading="lazy"><span>Cinescape</span><p class="desc">Sitio web de cine con cartelera y estrenos.</p>
+                        <ul class="tags"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
                     </a>
-                    <a class="project" href="https://sebas450.github.io/mrPotato/" target="_blank" rel="noopener">
-                        <img src="img/MRpotato.png" alt="" loading="lazy"><span>Mr. Potato</span><p class="desc">Juego interactivo para armar al Señor Cara de Papa con JavaScript.</p>
+                    <a class="project" data-tech="html-css" href="https://sebas450.github.io/mrPotato/" target="_blank" rel="noopener">
+                        <img src="img/MRpotato.png" alt="" loading="lazy"><span>Mr. Potato</span><p class="desc">Ejercicio de maquetación: el Señor Cara de Papa armado pieza por pieza con HTML y CSS.</p>
+                        <ul class="tags"><li>HTML</li><li>CSS</li></ul>
                     </a>
                 </div>
             </div>
