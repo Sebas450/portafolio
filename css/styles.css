@@ -1,328 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');   
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --teal-dark: #395B64;
+    --teal: #A5C9CA;
+    --ink: #181818;
+    --gold: #E3B71B;
+    --white: #fff;
+    --radius: 14px;
 }
 
-header .navbar {
-    background: #A5C9CA;
-    color: #fff;
-    padding-right: 20px;
-    font-weight: bold;
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+body {
+    font-family: "Playfair Display", serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--ink);
 }
 
-.list{
-    font-family: "Playfair Display", serif;
-    background: #A5C9CA;
-    color: #fff;
+h1, h2, h3, .logo, .btn, .eyebrow, nav a { font-family: "Raleway", sans-serif; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+.container { width: min(1120px, 100% - 32px); margin-inline: auto; }
+
+/* Navegación */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(57, 91, 100, .92);
+    backdrop-filter: blur(8px);
+    color: var(--white);
 }
-header{
-    background: #395B64;
-}
-#hero{
-    position: relative;
-    color: #fff;
-    padding-top: 75px;
-    height: 90vh;
-}
-.col-hero .boton{
-    font-family: "Playfair Display", serif;
-    position: absolute;
-    left: 200px;
-    color: #fff;
-    border: 3px solid #000;
-    border-radius: 5px;
-    font-size: 45px;
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+.logo { font-weight: 800; font-size: 1.4rem; text-decoration: none; color: var(--gold); }
+.nav nav { min-width: 0; max-width: 100%; }
+.nav ul { display: flex; gap: 24px; list-style: none; overflow-x: auto; }
+.nav a { text-decoration: none; font-weight: 600; font-size: .95rem; white-space: nowrap; }
+.nav ul a:hover { color: var(--gold); }
+
+/* Botones */
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.actions.center { justify-content: center; }
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 999px;
+    background: var(--gold);
+    color: var(--ink);
+    font-weight: 600;
     text-decoration: none;
-    transition: .5s;
-    cursor: pointer;
+    transition: transform .2s, background .2s;
+    overflow-wrap: anywhere;
 }
-.col-hero .boton:hover{
-    transform: scale(0.9);
-}
-#hero .img1{
-    position: absolute;
-    top: 90px;
-}
-#hero h1{
-    font-family: "Playfair Display", serif;
-    margin-left: 110px ; 
-}
-#hero h3{
-    font-family: 'Raleway', serif;
-    font-size: 75px;
-}
-#hero p{
-    font-family: "Playfair Display", serif;
-    margin-top: 225px;
-    margin-left: 50px ;
-    font-size: 40px;
-}
-#hero .fila{
-    display: flex;
-}
-#hero .col-hero{
-    margin-right: 100px;
-}
-#hero .img2{
-    position: absolute;
-    bottom: 100px;
-}
-#hero .img3{
-    position: absolute;
-    bottom: -7px;
-    z-index: 1;
-    right: -300px;
-}
-#hero .img4{
-    position: absolute;
-    bottom: 0;
-    right: -286px;
-    z-index: 2;
-}
+.btn:hover { transform: translateY(-2px); }
+.btn-ghost { background: transparent; color: inherit; box-shadow: inset 0 0 0 2px currentColor; }
 
-/* Seccion sobre mi */
-#sobre-mi{
-    padding-top: 50px;
-    background: #A5C9CA;
-    height: 100vh;
-    display: block;
-    text-align: center;
-}
-#sobre-mi h3{
-    padding-bottom: 20px;
-    font-family: 'Raleway', serif;
-    font-size: 70px;
-}
-#sobre-mi p{
-    padding-bottom: 20px;
-    font-family: "Playfair Display", serif;
-    font-size: 35px;
-    text-align: justify;
-}
-#sobre-mi .cajita{
-    position: relative;
-}
-#sobre-mi .Cuadro{
-    z-index: 1;
-}
-#sobre-mi .Linea1{
-    position: absolute;
-    bottom: 250px;
-    left: 50px;
-    z-index: 3;
-}
-#sobre-mi .Linea2{
-    position: absolute;
-    bottom: 250px;
-    right: 50px;
-    z-index: 3;
-}
+/* Hero */
+.hero { background: var(--teal-dark); color: var(--white); padding: 64px 0 0; overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; align-items: end; gap: 32px; }
+.hero-grid > div:first-child { padding-bottom: 80px; align-self: center; }
+.eyebrow { color: var(--gold); font-weight: 600; letter-spacing: .15em; text-transform: uppercase; }
+.hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.05; margin: 8px 0 20px; }
+.lead { font-size: clamp(1.15rem, 2vw, 1.4rem); max-width: 32ch; opacity: .9; }
+.photo { background: var(--teal); border-radius: 50% 50% 0 0; overflow: hidden; }
+.photo img { width: 100%; height: auto; }
 
-#sobre-mi .Linea3{
-    position: absolute;
-    top: 10px;
-    right: 640px;
-    z-index: 3;
-}
-#sobre-mi h2{
-    font-family: "Playfair Display", serif;
-    color: #fff;
-    font-weight: bold;
-}
-#sobre-mi h4{
-    font-family: "Playfair Display", serif;
-    color: #E3B71B;
-    font-weight: bold;
-}
-#sobre-mi .t1{
-    position: absolute;
-    top: 120px;
-    left: 120px;
-    z-index: 3;
-}
-#sobre-mi .t2{
-    position: absolute;
-    top: 120px;
-    right: 120px;
-    z-index: 3;
-}
-#sobre-mi .t3{
-    position: absolute;
-    bottom: 105px;
-    right: 0;
-    left: 0;
-    z-index: 3;
-}
-#sobre-mi .p1{
-    font-size: 40px;
-    position: absolute;
-    top: 60px;
-    left: 265px;
-    z-index: 3;
-}
-#sobre-mi .p2{
-    font-size: 40px;
-    position: absolute;
-    top: 60px;
-    right: 275px;
-    z-index: 3;
-}
-#sobre-mi .p3{
-    font-size: 40px;
-    position: absolute;
-    bottom: 140px;
-    right: 0;
-    left: 0;
-    z-index: 3;
-}
-/* Seccion de habilidades */
-#habilidades{
-    padding-top: 50px;
-    padding-bottom: 1000px;
-    background: #181818;
-    height: 100vh;
-    display: block;
-    text-align: center;
-    align-items: center;
-}
-#habilidades h3{
-    font-family: 'Raleway', serif;
-    color: #fff;
-    text-align: center;
-    font-size: 50px;
-}
-#habilidades h2{
-    font-family: 'Raleway', serif;
-    color: #fff;
-}
-#habilidades p{
-    font-family: "Playfair Display", serif;
-    color: #fff;
-    text-align: justify;
-}
-#habilidades .fila{
-    display: flex;
-}
-#habilidades .col-hab{
-    position: relative;
-    margin: 50px;
-}
-#habilidades .col-hab .c1{
-    position: absolute;
-    top: 135px;
-    left: 290px;
-    z-index: 2;
-}
-#habilidades .col-hab .c2{
-    position: absolute;
-    top: 135px;
-    right: 160px;
-    z-index: 2;
-}
-#habilidades .col-hab .c3{
-    position: absolute;
-    top: 105px;
-    right: 160px;
-    z-index: 2;
-}
-/* Estilos de la seccion de portafoloo */
-#portfolio{
-    padding-top: 50px;
-    background: #A5C9CA;
-    height: 85vh;
-    display: block;
-    text-align: center;
-}
-#portfolio .cajita{
-    position: relative;
-}
-#portfolio .cajita h2{
-    text-align: justify;
-    font-family: 'Raleway', serif;
-    font-size: 150px;
-    color: transparent; 
-    -webkit-text-stroke: 1px #000;
-    text-shadow: 1px #000;
-}
-#portfolio .cajita h3{
-    text-align: justify;
-    font-family: 'Raleway', serif;
-    font-size: 75px;
-    color: #000; 
-}
-#portfolio .cajita .titulo{
-    position: absolute;
-    top: 72px;
-    left: 5px;
-}
-#portfolio .caja{
-    position: relative;
-    background: #181818;
-    height: 450px;
-    padding-top: 125px;
-}
-#portfolio .caja a{
+/* Secciones */
+.section { padding: 96px 0; }
+.section h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 40px; text-align: center; }
+.light { background: var(--teal); }
+.dark { background: var(--ink); color: var(--white); }
+
+.intro { max-width: 65ch; margin: 0 auto 48px; font-size: 1.25rem; text-align: center; }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; list-style: none; }
+.stats li { background: var(--ink); color: var(--white); border-radius: var(--radius); padding: 28px; text-align: center; }
+.stats strong { display: block; font-size: 3rem; line-height: 1; color: var(--gold); }
+
+/* Habilidades */
+.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.card { background: #222; border-radius: var(--radius); padding: 32px; }
+.skill img { width: 56px; height: 56px; object-fit: contain; background: var(--white); border-radius: 12px; padding: 8px; }
+.skill h3 { font-size: 1.5rem; margin: 16px 0 12px; }
+.skill p { opacity: .85; font-size: 1rem; }
+.bar { height: 10px; border-radius: 999px; background: #333; margin-bottom: 20px; position: relative; }
+.bar::before { content: ""; position: absolute; inset: 0 auto 0 0; width: var(--p); border-radius: inherit; background: var(--gold); }
+.bar span { position: absolute; right: 0; top: -26px; font-size: .85rem; font-family: "Raleway", sans-serif; }
+
+/* Portafolio */
+.projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+.project {
+    background: var(--ink);
+    color: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
     text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
 }
-#portfolio .caja h2{
-    font-family: 'Raleway', serif;
-    font-weight: normal;
-    color: #fff;
+.project img { aspect-ratio: 16 / 10; width: 100%; object-fit: cover; }
+.project span { display: block; padding: 14px 18px; font-family: "Raleway", sans-serif; font-weight: 600; }
+.project:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0, 0, 0, .25); }
+
+/* Experiencia */
+.exp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; }
+.col-title { font-size: 1.5rem; margin-bottom: 28px; color: var(--teal); }
+.timeline { list-style: none; border-left: 2px solid var(--teal-dark); }
+.timeline .desc { font-size: 1rem; margin-top: 4px; }
+.timeline li { position: relative; padding: 0 0 40px 32px; }
+.timeline li::before {
+    content: ""; position: absolute; left: -9px; top: 6px;
+    width: 16px; height: 16px; border-radius: 50%; background: var(--gold);
 }
-/* Estilos de mi experiencia */
-#experiencia{
-    padding-top: 50px;
-    padding-bottom: 1000px;
-    background: #181818;
-    height: 100vh;
-    display: block;
-    text-align: center;
-    align-items: center; 
+.timeline time { color: var(--gold); font-family: "Raleway", sans-serif; font-weight: 600; }
+.timeline h4 { font-family: "Raleway", sans-serif; font-size: 1.25rem; margin: 4px 0; }
+.timeline p { opacity: .75; }
+
+/* Footer */
+footer { background: #000; color: var(--white); text-align: center; padding: 80px 0 40px; }
+footer h2 { font-size: clamp(2rem, 4vw, 3rem); }
+footer p a { color: var(--gold); overflow-wrap: anywhere; }
+footer small { display: block; margin-top: 56px; opacity: .6; }
+
+a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+@media (max-width: 760px) {
+    .nav-inner { flex-direction: column; align-items: flex-start; gap: 4px; padding: 10px 0; }
+    .nav ul { width: 100%; gap: 18px; padding-bottom: 4px; }
+    .hero { padding-top: 40px; }
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-grid > div:first-child { padding-bottom: 0; }
+    .photo { max-width: 320px; margin-inline: auto; }
+    .section { padding: 64px 0; }
 }
-#experiencia h3{
-    font-family: 'Raleway', serif;
-    font-size: 50px;
-    color: #fff; 
-}
-#experiencia h2{
-    font-family: 'Raleway', serif;
-    font-size: 35px;
-    color: #fff; 
-}
-#experiencia p{
-    font-family: "Playfair Display", serif;
-    font-size: 30px;
-    color: #fff; 
-}
-#experiencia .cajita{
-    position: relative;
-}
-#experiencia .cajita .col1{
-    position: absolute;
-    top: 150px;
-    left: 250px;
-}
-#experiencia .cajita .col2{
-    position: absolute;
-    top: 280px;
-    right: 230px;
-}
-#experiencia .cajita .col3{
-    position: absolute;
-    top: 500px;
-    left: 250px;
-}
-#experiencia .cajita .col4  {
-    position: absolute;
-    bottom: 50px;
-    right: 230px;
-}
-/* Estilos de footer */
-footer {
-    background: #000;
-    text-align: center;
-    padding: 50px 0;
-    color: #fff;
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn, .project { transition: none; }
 }
