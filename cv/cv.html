@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Hoja de vida · Sebastian Hernandez Romero</title>
+<!-- Fuente de la hoja de vida. Para regenerar el PDF:
+     msedge --headless --no-pdf-header-footer --print-to-pdf="cv/Sebastian-Hernandez-Romero-CV.pdf" cv/cv.html -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+    @page { size: A4; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: "Poppins", sans-serif; color: #1e2130; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { width: 210mm; height: 297mm; display: grid; grid-template-columns: 42% 58%; grid-template-rows: 54mm 1fr; overflow: hidden; }
+
+    header { grid-column: 1 / -1; background: #2b3350; color: #fff; display: flex; align-items: center; gap: 9mm; padding-left: 8mm; position: relative; }
+    .foto { width: 54mm; height: 54mm; border-radius: 50%; border: 3mm solid #2b3350; overflow: hidden; background: #f2f2f4; position: relative; top: 10mm; z-index: 2; flex-shrink: 0; }
+    .foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; transform: scale(1.7); transform-origin: 49% 20%; }
+    header h1 { font-size: 22pt; font-weight: 700; line-height: 1.1; }
+    header p { font-size: 17pt; font-weight: 300; }
+
+    aside { background: #1e2130; color: #fff; padding: 22mm 8mm 10mm 10mm; display: flex; flex-direction: column; gap: 10mm; }
+    main { padding: 8mm 9mm 8mm 9mm; display: flex; flex-direction: column; gap: 6mm; }
+
+    h2 { font-size: 15pt; font-weight: 700; margin-bottom: 3mm; letter-spacing: .01em; }
+    aside p, aside li { font-size: 10.5pt; line-height: 1.7; font-weight: 300; list-style: none; overflow-wrap: anywhere; }
+    aside .links { margin-top: auto; }
+
+    main p { font-size: 9.5pt; line-height: 1.6; }
+    .job { margin-bottom: 3.5mm; }
+    .job h3 { font-size: 10pt; font-weight: 700; }
+    .job .cargo { font-size: 10pt; font-weight: 600; margin-bottom: 1mm; }
+    .job ul { padding-left: 5mm; }
+    .job li { font-size: 9pt; line-height: 1.45; }
+    .edu li { list-style: none; font-size: 10pt; line-height: 1.5; margin-bottom: 1.5mm; }
+</style>
+</head>
+<body>
+<div class="page">
+    <header>
+        <div class="foto"><img src="../img/Sebas.webp" alt=""></div>
+        <div>
+            <h1>Sebastian Hernandez Romero</h1>
+            <p>Desarrollador Full Stack Junior</p>
+        </div>
+    </header>
+
+    <aside>
+        <section>
+            <h2>CONTACTO</h2>
+            <ul>
+                <li>(316) 359 7867</li>
+                <li>sebastianhernandezromero45<br>@gmail.com</li>
+                <li>Bogotá, Colombia</li>
+            </ul>
+        </section>
+        <section>
+            <h2>HABILIDADES TÉCNICAS</h2>
+            <ul>
+                <li>Java · API REST</li>
+                <li>JavaScript · HTML · CSS</li>
+                <li>MySQL · PostgreSQL</li>
+                <li>Git · Azure DevOps · Scrum</li>
+                <li>Active Directory · Windows 10/11</li>
+                <li>Redes · VPN · Soporte TI</li>
+            </ul>
+        </section>
+        <section class="links">
+            <h2>LINKS</h2>
+            <ul>
+                <li>sebas450.github.io/portafolio</li>
+                <li>linkedin.com/in/sebastian-hernandez-dev</li>
+                <li>github.com/Sebas450</li>
+            </ul>
+        </section>
+    </aside>
+
+    <main>
+        <section>
+            <h2>PERFIL PROFESIONAL</h2>
+            <p>Desarrollador Full Stack Junior con experiencia en desarrollo backend, soporte técnico empresarial y metodologías ágiles. Estudiante de Ingeniería de Software con manejo de Java, JavaScript y bases de datos relacionales. Experiencia en entornos corporativos de desarrollo y soporte TI. Motivado por la innovación, las buenas prácticas y la mejora continua.</p>
+        </section>
+
+        <section>
+            <h2>EXPERIENCIA</h2>
+            <div class="job">
+                <h3>Henkia (Octubre 2026 – Actualidad)</h3>
+                <p class="cargo">Especialista en Soporte en Sitio</p>
+                <ul>
+                    <li>Soporte técnico presencial a usuarios finales</li>
+                    <li>Soporte y mantenimiento de sitios web</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>ITAAS S.A.S. (Marzo 2025 – Abril 2026)</h3>
+                <p class="cargo">Analista de Soporte TI</p>
+                <ul>
+                    <li>Gestión de tickets y soporte remoto a usuarios finales</li>
+                    <li>Mantenimiento preventivo y correctivo de hardware y software</li>
+                    <li>Creación y administración de usuarios en Active Directory</li>
+                    <li>Diagnóstico de redes y resolución de incidencias</li>
+                    <li>Instalación, configuración y administración de Windows 10/11</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Skandia Colombia (Septiembre 2024 – Febrero 2025)</h3>
+                <p class="cargo">Auxiliar de Desarrollo</p>
+                <ul>
+                    <li>Desarrollo backend con JavaScript y MySQL</li>
+                    <li>Gestión y consumo de API REST en Azure DevOps</li>
+                    <li>Documentación técnica para accesibilidad del equipo</li>
+                    <li>Trabajo colaborativo bajo metodología Scrum</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>FORMACIÓN ACADÉMICA</h2>
+            <ul class="edu">
+                <li>2025 – En curso · Ingeniería de Software · Uniempresarial</li>
+                <li>2025 · Tecnólogo en Análisis y Desarrollo de Software · SENA</li>
+                <li>2022 · Técnico en Desarrollo de Software · SENA</li>
+            </ul>
+        </section>
+    </main>
+</div>
+</body>
+</html>
